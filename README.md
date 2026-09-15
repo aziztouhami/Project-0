@@ -37,11 +37,16 @@ Copy `.env.example` to `.env` and fill in whichever API keys you need
 ANTHROPIC_API_KEY=...
 OPENAI_API_KEY=...
 GOOGLE_API_KEY=...
+GROQ_API_KEY=...
 ```
 
 Ollama needs no API key, but it must be running locally
 (`ollama serve`, default `http://localhost:11434`) with the target model
 already pulled (`ollama pull llama3.2:3b`).
+
+Any OpenAI-compatible endpoint (e.g. Groq) can be used with `--provider openai`
+by overriding `--base-url` and `--api-key-env` (see below) — no separate
+provider code is needed.
 
 ## Running each model
 
@@ -60,16 +65,27 @@ python src/run.py --model claude-haiku-4-5 --provider anthropic \
 # Open-weights model via Ollama
 python src/run.py --model llama3.2:3b --provider ollama \
     --items data/items.jsonl --prompt src/prompt.txt --out results/raw/open.csv
+
+# Cheap model via Groq's OpenAI-compatible endpoint
+python src/run.py --model openai/gpt-oss-20b --provider openai \
+    --base-url https://api.groq.com/openai/v1 --api-key-env GROQ_API_KEY \
+    --items data/items.jsonl --prompt src/prompt.txt --out results/raw/cheap.csv
 ```
 
 Swap `--provider` / `--model` for `openai` or `google` models as needed — the
 same script handles all four provider types. `--max-tokens` defaults to 200;
 pass `--max-tokens N` to override (keep it identical across all three runs).
 
+`--base-url` overrides a provider's default API endpoint (used for Ollama's
+local server, or to point `--provider openai` at any OpenAI-compatible API
+such as Groq's). `--api-key-env` overrides which environment variable holds
+the key (default: `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` / `GOOGLE_API_KEY`
+depending on `--provider`; unused for ollama).
+
 Each run writes exactly 50 rows to its output CSV, even if some calls fail
 (a failed call gets `raw_output=""` and a filled-in `error` column — it is not
-retried for malformed output, only for connection/timeout errors, and counts
-as a wrong answer during grading).
+retried for malformed output, only for connection/timeout errors and HTTP 429
+rate limits, and counts as a wrong answer during grading).
 
 ## Rules this project follows
 

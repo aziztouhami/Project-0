@@ -60,7 +60,7 @@ def render_prompt(template, bio_text):
     return template.replace("{{BIO_TEXT}}", bio_text)
 
 
-def call_anthropic(prompt_text, model, max_tokens, base_url=None):
+def call_anthropic(prompt_text, model, max_tokens, base_url=None, api_key_env=None):
     import anthropic
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -74,10 +74,13 @@ def call_anthropic(prompt_text, model, max_tokens, base_url=None):
     return raw_output, resp.usage.input_tokens, resp.usage.output_tokens, None
 
 
-def call_openai(prompt_text, model, max_tokens, base_url=None):
+def call_openai(prompt_text, model, max_tokens, base_url=None, api_key_env=None):
     import openai
 
-    client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    client_kwargs = {"api_key": os.environ[api_key_env or "OPENAI_API_KEY"]}
+    if base_url:
+        client_kwargs["base_url"] = base_url
+    client = openai.OpenAI(**client_kwargs)
     resp = client.chat.completions.create(
         model=model,
         max_tokens=max_tokens,
@@ -88,7 +91,7 @@ def call_openai(prompt_text, model, max_tokens, base_url=None):
     return raw_output, resp.usage.prompt_tokens, resp.usage.completion_tokens, None
 
 
-def call_google(prompt_text, model, max_tokens, base_url=None):
+def call_google(prompt_text, model, max_tokens, base_url=None, api_key_env=None):
     from google import genai
     from google.genai import types
 
@@ -106,9 +109,10 @@ def call_google(prompt_text, model, max_tokens, base_url=None):
     return raw_output, usage.prompt_token_count, usage.candidates_token_count, None
 
 
-def call_ollama(prompt_text, model, max_tokens, base_url):
+def call_ollama(prompt_text, model, max_tokens, base_url, api_key_env=None):
     import requests
 
+    base_url = base_url or "http://localhost:11434"
     resp = requests.post(
         f"{base_url}/api/generate",
         json={
@@ -142,7 +146,17 @@ PROVIDERS = {
 }
 
 
+def get_status_code(exc):
+    status_code = getattr(exc, "status_code", None)
+    if status_code is not None:
+        return status_code
+    response = getattr(exc, "response", None)
+    return getattr(response, "status_code", None) if response is not None else None
+
+
 def is_retryable(exc):
+    if get_status_code(exc) == 429:
+        return True
     name = type(exc).__name__
     return "Timeout" in name or "Connection" in name
 
@@ -155,7 +169,7 @@ def run_one(item, prompt_text, args):
         start = time.perf_counter()
         try:
             raw_output, prompt_tokens, completion_tokens, tps = call_fn(
-                prompt_text, args.model, args.max_tokens, args.base_url
+                prompt_text, args.model, args.max_tokens, args.base_url, args.api_key_env
             )
             latency_ms = round((time.perf_counter() - start) * 1000, 1)
             return {
@@ -178,7 +192,12 @@ def run_one(item, prompt_text, args):
                 time.sleep(RETRY_BACKOFF_SECONDS * attempt)
                 continue
 
-            error_msg = "timeout" if "Timeout" in type(exc).__name__ else f"api_error: {exc}"
+            if "Timeout" in type(exc).__name__:
+                error_msg = "timeout"
+            elif get_status_code(exc) == 429:
+                error_msg = f"rate_limited (429) after retries: {exc}"
+            else:
+                error_msg = f"api_error: {exc}"
             return {
                 "id": item["id"],
                 "driver": item["driver"],
@@ -202,7 +221,20 @@ def main():
     parser.add_argument("--prompt", required=True)
     parser.add_argument("--out", required=True)
     parser.add_argument("--max-tokens", type=int, default=200)
-    parser.add_argument("--base-url", default="http://localhost:11434")
+    parser.add_argument(
+        "--base-url",
+        default=None,
+        help="Override the provider's API endpoint (e.g. an OpenAI-compatible "
+        "endpoint like Groq's for --provider openai). Defaults to "
+        "http://localhost:11434 for ollama and each SDK's own default otherwise.",
+    )
+    parser.add_argument(
+        "--api-key-env",
+        default=None,
+        help="Environment variable holding the API key (default: "
+        "ANTHROPIC_API_KEY / OPENAI_API_KEY / GOOGLE_API_KEY depending on "
+        "--provider). Not used for ollama.",
+    )
     args = parser.parse_args()
 
     items = load_items(args.items)
