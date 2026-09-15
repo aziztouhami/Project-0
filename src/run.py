@@ -83,7 +83,7 @@ def call_openai(prompt_text, model, max_tokens, base_url=None, api_key_env=None)
     client = openai.OpenAI(**client_kwargs)
     resp = client.chat.completions.create(
         model=model,
-        max_tokens=max_tokens,
+        max_completion_tokens=max_tokens,
         temperature=TEMPERATURE,
         messages=[{"role": "user", "content": prompt_text}],
     )
@@ -220,7 +220,7 @@ def main():
     parser.add_argument("--items", required=True)
     parser.add_argument("--prompt", required=True)
     parser.add_argument("--out", required=True)
-    parser.add_argument("--max-tokens", type=int, default=200)
+    parser.add_argument("--max-tokens", type=int, default=600)
     parser.add_argument(
         "--base-url",
         default=None,

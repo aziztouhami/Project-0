@@ -73,7 +73,7 @@ python src/run.py --model openai/gpt-oss-20b --provider openai \
 ```
 
 Swap `--provider` / `--model` for `openai` or `google` models as needed — the
-same script handles all four provider types. `--max-tokens` defaults to 200;
+same script handles all four provider types. `--max-tokens` defaults to 600;
 pass `--max-tokens N` to override (keep it identical across all three runs).
 
 `--base-url` overrides a provider's default API endpoint (used for Ollama's
