@@ -63,7 +63,7 @@ def build_bio(row: dict, distractor_row: dict) -> str:
     championships = row["World Championships"]
 
     distractor_name = distractor_row["Driver Name"]
-    distractor_podiums = distractor_row["Podiums"]
+    distractor_career_points = distractor_row["Career Points"]
 
     last_name = name.split()[-1]
     championships_clause = (
@@ -98,10 +98,8 @@ def build_bio(row: dict, distractor_row: dict) -> str:
         f"and {fastest_laps} "
         f"{pluralize(fastest_laps, 'fastest lap', 'fastest laps')}, and he "
         f"{championships_clause}.",
-        f"He is often compared to {distractor_name}, who recorded "
-        f"{distractor_podiums} "
-        f"{pluralize(distractor_podiums, 'podium', 'podiums')} across his "
-        f"career.",
+        f"He is often compared to {distractor_name}, whose career total "
+        f"sits at {distractor_career_points} championship points.",
     ]
 
     padding_candidates = [
@@ -140,7 +138,12 @@ def main():
     items = []
     for idx, row in enumerate(rows):
         rng = random.Random(DISTRACTOR_SEED + idx)
-        other_indices = [i for i in range(len(rows)) if i != idx]
+        own_points = row["Career Points"]
+        other_indices = [
+            i
+            for i in range(len(rows))
+            if i != idx and rows[i]["Career Points"] != own_points
+        ]
         distractor_idx = rng.choice(other_indices)
         distractor_row = rows[distractor_idx]
 
