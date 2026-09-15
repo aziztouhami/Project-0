@@ -235,9 +235,18 @@ def main():
         "ANTHROPIC_API_KEY / OPENAI_API_KEY / GOOGLE_API_KEY depending on "
         "--provider). Not used for ollama.",
     )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Only process the first N items -- for smoke-testing a provider, "
+        "not for real bake-off runs (those must use all 50).",
+    )
     args = parser.parse_args()
 
     items = load_items(args.items)
+    if args.limit is not None:
+        items = items[: args.limit]
     prompt_template = load_prompt(args.prompt)
 
     out_path = Path(args.out)

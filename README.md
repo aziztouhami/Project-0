@@ -80,7 +80,9 @@ pass `--max-tokens N` to override (keep it identical across all three runs).
 local server, or to point `--provider openai` at any OpenAI-compatible API
 such as Groq's). `--api-key-env` overrides which environment variable holds
 the key (default: `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` / `GOOGLE_API_KEY`
-depending on `--provider`; unused for ollama).
+depending on `--provider`; unused for ollama). `--limit N` processes only the
+first N items — for smoke-testing a new provider/model before committing to a
+full run; never use it for the real 50-item bake-off runs.
 
 Each run writes exactly 50 rows to its output CSV, even if some calls fail
 (a failed call gets `raw_output=""` and a filled-in `error` column — it is not
