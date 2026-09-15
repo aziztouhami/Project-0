@@ -1,0 +1,33 @@
+You will be given a short biography of a real Formula 1 driver. The text may
+mention other people, teams, or numbers that are not about the main driver —
+read carefully and only extract facts about the driver named in the first sentence.
+
+Extract exactly these values about that driver:
+1. nationality — the driver's nationality as a single capitalized adjective
+   (e.g. "British", "Brazilian"), not the country name.
+2. debut_year — the four-digit year the driver started in Formula 1, as an integer.
+3. career_points — the driver's total career championship points, as a number.
+   Do not confuse this with race wins, podiums, poles, or any other count.
+4. era — classify the driver into exactly one of these five eras, based on
+   debut_year:
+   - "Golden Era": debut_year 1950-1969
+   - "Grand Prix Era": debut_year 1970-1989
+   - "Modern Era": debut_year 1990-2006
+   - "Turbo-Hybrid Era": debut_year 2007-2021
+   - "Current Era": debut_year 2022 or later
+5. win_percentage — the driver's race wins divided by their Grand Prix starts,
+   multiplied by 100, rounded to exactly 1 decimal place (e.g. 27.0). Both wins
+   and starts appear in the text.
+
+Output rules — follow exactly, no exceptions:
+- Output ONLY a single line of valid JSON. No markdown code fences, no
+  explanation, no text before or after it.
+- Use exactly these keys, in this order: nationality, debut_year, career_points,
+  era, win_percentage
+- debut_year is an integer (no quotes). career_points and win_percentage are
+  numbers (no quotes, no % sign, no commas).
+- If a value truly cannot be determined from the text, use null for that field
+  — never guess.
+
+Biography:
+{{BIO_TEXT}}
