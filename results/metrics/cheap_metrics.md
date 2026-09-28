@@ -1,62 +1,72 @@
 # Cheap model metrics — openai/gpt-oss-20b (via Groq)
 
 Real 50-item run. `--provider openai`, `--base-url https://api.groq.com/openai/v1`,
-`--api-key-env GROQ_API_KEY`, `--max-tokens 600`, temperature 0, same
+`--api-key-env GROQ_API_KEY`, `--max-tokens 900`, temperature 0, same
 `src/prompt.txt` and `data/items.jsonl` order used for every model.
+
+The prompt now asks for 6 fields, not 5: `podium_percentage` was added
+alongside `win_percentage`. Like win percentage, it is never stated as a
+percentage anywhere in the bio text — only the raw podium count and Grand
+Prix starts are given — so the model has to derive it from the same two
+numbers used to compute the ground truth, not copy a number out of the text.
 
 ## Accuracy
 
-**48/50 correct (96.0%)**
+**49/50 correct (98.0%)**
 
-Both misses are the same failure mode: `era` field mismatch, everything else
-correct.
+One genuine miss:
 
-| id | driver | got | expected | other 4 fields |
+| id | driver | got | expected | other 5 fields |
 |---|---|---|---|---|
-| d03 | Max Verstappen | `"Modern Era"` | `"Turbo-Hybrid Era"` | all correct |
-| d38 | Carlos Sainz Jr. | `"Modern Era"` | `"Turbo-Hybrid Era"` | all correct |
+| d03 | Max Verstappen | `era: "Modern Era"` | `era: "Turbo-Hybrid Era"` | all correct, including podium_percentage |
 
-Both drivers debuted in 2015 — squarely inside the 2007-2021 Turbo-Hybrid Era
-range given in the prompt, not a boundary year. The model correctly extracted
-`debut_year: 2015` in both cases but misapplied its own stated classification
-rule. Not a parsing or attribution failure (the distractor trap wasn't
-involved in either miss) — a genuine reasoning error on the era rule.
+Verstappen debuted in 2015 — squarely inside the 2007-2021 Turbo-Hybrid Era
+range given in the prompt, not a boundary year. Same failure mode seen on
+the 5-field run: the model gets `debut_year` right but misapplies its own
+stated era rule. Not a parsing or attribution failure.
 
 ## Latency
 
-- p50: 6816ms
-- p95: 8163ms
+- p50: 5048ms
+- p95: 8792ms
 
 ## Cost (Groq pricing used: $0.10 / 1M input tokens, $0.50 / 1M output tokens)
 
-- Cost per 1k requests: **$0.22**
-- Cost per 1k requests at 100x traffic: **$22.45** (same unit cost, just more of them)
+- Cost per 1k requests: **$0.26**
+- Cost per 1k requests at 100x traffic: **$26.44** (same unit cost, just more of them)
 
-## max_tokens finding (worth keeping, not just a bug to bury)
+## Two findings from adding this field (both worth keeping)
 
-The first attempt at this run used the old default of `--max-tokens 200`
-with the OpenAI SDK's `max_tokens` parameter, against 2 items as a smoke
-test. All completions came back with `raw_output=""` and an empty `error`
-column — the call succeeded, but produced nothing usable, and nothing in
-run.py's output would have told you why without inspecting the raw API
-response directly.
+### 1. max_tokens needed recalibrating again: 600 → 900
 
-The cause: **gpt-oss-20b's hidden reasoning tokens share the same
-output-token budget as the visible answer**, so a naive low limit silently
-returns empty output with no error. Inspecting the raw response showed
-`finish_reason: "length"` with 198 of the 200 completion tokens spent on a
-`reasoning` field that had actually worked out the fully correct answer —
-there was just no budget left to emit it as the final JSON `content`.
+The 5-field run had settled on `--max-tokens 600` with headroom to spare
+(max usage 521/600). Re-running the exact same setup with the 6-field prompt
+produced 2/50 rows that hit the 600 cap and came back truncated
+(`finish_reason: "length"`, unparsable partial JSON) — confirming the
+earlier finding still applies: **gpt-oss-20b's hidden reasoning tokens share
+the same output-token budget as the visible answer**, and that budget isn't
+fixed per item — it varies enough per driver that adding one more field to
+extract was enough to push a couple of items over a limit that previously
+had 15%+ headroom to spare.
 
-Two changes fixed it for this run:
-- Switched `call_openai` from the deprecated `max_tokens` request parameter
-  to `max_completion_tokens` (Groq's documented recommendation for reasoning
-  models).
-- Raised the shared `--max-tokens` default from 200 to 600, applied
-  identically across all three models per the bake-off's "no per-model
-  tweaks" rule — this run's actual completion token usage topped out at 521,
-  so 600 leaves headroom without being an arbitrarily large number picked
-  just for this model.
+Fix: raised the shared `--max-tokens` default to 900 (verified first against
+just the two previously-truncated items, which needed 564 and 639 tokens —
+before re-running the full 50-item set once, uniformly, not per-item). Final
+run's max usage was 654/900. Whatever model runs next under this prompt
+should start from 900, not 600.
 
-If you see a wall of empty `raw_output` with no `error` on some other
-reasoning model, this is the first thing to check.
+### 2. A scoring bug, not a model error: floating-point tolerance boundary
+
+The first full run under the 6-field prompt scored 47/50, with 2 of the 3
+misses reported as `podium_percentage` mismatches — both exactly 0.1 away
+from the expected value (24.1 vs 24.0, 24.9 vs 25.0). `score.py`'s tolerance
+check was `abs(a - b) > 0.1` on raw Python floats: since 24.1 cannot be
+represented exactly in binary floating point, `abs(24.1 - 24.0)` evaluates
+to `0.10000000000000142`, not `0.1` — just over the tolerance, purely as a
+float-representation artifact, not a real 0.1+ discrepancy.
+
+Fixed in `src/score.py` by rounding the diff to 6 decimal places before
+comparing (`exceeds_tolerance()`), applied to all three tolerance-based
+fields (career_points, win_percentage, podium_percentage) for consistency.
+Re-scoring the same raw output with the fix: 47/50 → 49/50 — both boundary
+cases were correct all along.
