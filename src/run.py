@@ -220,7 +220,7 @@ def main():
     parser.add_argument("--items", required=True)
     parser.add_argument("--prompt", required=True)
     parser.add_argument("--out", required=True)
-    parser.add_argument("--max-tokens", type=int, default=600)
+    parser.add_argument("--max-tokens", type=int, default=900)
     parser.add_argument(
         "--base-url",
         default=None,

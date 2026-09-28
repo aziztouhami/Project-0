@@ -25,9 +25,13 @@ mechanically — there is no manual labelling step. For each driver it:
   like career points.
 - Computes `expected.era` from `debut_year` using the five fixed date ranges
   also given to the model in the prompt, and copies `expected.nationality`,
-  `expected.debut_year`, `expected.career_points`, and `expected.win_percentage`
-  directly from the corresponding CSV columns (win percentage rounded to 1
-  decimal place).
+  `expected.debut_year`, `expected.career_points`, `expected.win_percentage`,
+  and `expected.podium_percentage` directly from the corresponding CSV columns
+  (win/podium percentage rounded to 1 decimal place). Neither percentage is
+  ever stated as a percentage in the bio text itself — only the raw counts
+  (wins, podiums, Grand Prix starts) are — so the model has to derive both
+  from the same two raw numbers used to compute the ground truth, not just
+  copy a number out of the text.
 
 The distractor driver is chosen with `random.Random(42 + row_index)`, so
 regenerating the file produces byte-identical output — the dataset is a
@@ -40,8 +44,8 @@ before committing:
 
 - Exactly 50 items, ids `d01`-`d50` in order, 50 distinct driver names.
 - Every `expected` field matches the source CSV row exactly (nationality,
-  debut year, career points, win percentage) and `era` is always one of the
-  five valid labels.
+  debut year, career points, win percentage, podium percentage) and `era` is
+  always one of the five valid labels.
 - Every bio's word count falls within the required 100-150 word range.
 - The driver's own name appears in their bio, and the driver's own last name
   never appears in the distractor clause (no accidental self-reference).

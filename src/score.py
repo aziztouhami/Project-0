@@ -14,6 +14,7 @@ from pathlib import Path
 
 CAREER_POINTS_TOLERANCE = 0.5
 WIN_PERCENTAGE_TOLERANCE = 0.1
+PODIUM_PERCENTAGE_TOLERANCE = 0.1
 
 SCORED_FIELDNAMES = [
     "id",
@@ -37,6 +38,14 @@ def load_items(path):
     return items
 
 
+def exceeds_tolerance(actual, expected_value, tolerance):
+    """abs(a - b) with float noise rounded away, so an exact-boundary
+    difference (e.g. 24.1 vs 24.0) isn't misjudged just because 24.1 can't be
+    represented exactly in binary floating point."""
+    diff = round(abs(float(actual) - float(expected_value)), 6)
+    return diff > tolerance
+
+
 def field_mismatches(parsed, expected):
     mismatches = []
 
@@ -54,8 +63,9 @@ def field_mismatches(parsed, expected):
         mismatches.append("debut_year")
 
     try:
-        diff = abs(float(parsed.get("career_points")) - float(expected["career_points"]))
-        if diff > CAREER_POINTS_TOLERANCE:
+        if exceeds_tolerance(
+            parsed.get("career_points"), expected["career_points"], CAREER_POINTS_TOLERANCE
+        ):
             mismatches.append("career_points")
     except (TypeError, ValueError):
         mismatches.append("career_points")
@@ -67,11 +77,22 @@ def field_mismatches(parsed, expected):
         mismatches.append("era")
 
     try:
-        diff = abs(float(parsed.get("win_percentage")) - float(expected["win_percentage"]))
-        if diff > WIN_PERCENTAGE_TOLERANCE:
+        if exceeds_tolerance(
+            parsed.get("win_percentage"), expected["win_percentage"], WIN_PERCENTAGE_TOLERANCE
+        ):
             mismatches.append("win_percentage")
     except (TypeError, ValueError):
         mismatches.append("win_percentage")
+
+    try:
+        if exceeds_tolerance(
+            parsed.get("podium_percentage"),
+            expected["podium_percentage"],
+            PODIUM_PERCENTAGE_TOLERANCE,
+        ):
+            mismatches.append("podium_percentage")
+    except (TypeError, ValueError):
+        mismatches.append("podium_percentage")
 
     return mismatches
 

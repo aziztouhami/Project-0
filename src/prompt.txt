@@ -18,14 +18,17 @@ Extract exactly these values about that driver:
 5. win_percentage — the driver's race wins divided by their Grand Prix starts,
    multiplied by 100, rounded to exactly 1 decimal place (e.g. 27.0). Both wins
    and starts appear in the text.
+6. podium_percentage — the driver's podium finishes divided by their Grand Prix
+   starts, multiplied by 100, rounded to exactly 1 decimal place (e.g. 52.4).
+   Both podium finishes and starts appear in the text.
 
 Output rules — follow exactly, no exceptions:
 - Output ONLY a single line of valid JSON. No markdown code fences, no
   explanation, no text before or after it.
 - Use exactly these keys, in this order: nationality, debut_year, career_points,
-  era, win_percentage
-- debut_year is an integer (no quotes). career_points and win_percentage are
-  numbers (no quotes, no % sign, no commas).
+  era, win_percentage, podium_percentage
+- debut_year is an integer (no quotes). career_points, win_percentage, and
+  podium_percentage are numbers (no quotes, no % sign, no commas).
 - If a value truly cannot be determined from the text, use null for that field
   — never guess.
 

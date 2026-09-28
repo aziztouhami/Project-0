@@ -160,6 +160,7 @@ def main():
                 "career_points": float(row["Career Points"]),
                 "era": era_for_debut_year(debut_year),
                 "win_percentage": round(float(row["Win Percentage"]), 1),
+                "podium_percentage": round(float(row["Podium Percentage"]), 1),
             },
         }
         items.append(item)
