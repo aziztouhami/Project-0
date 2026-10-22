@@ -1,0 +1,101 @@
+id,model,nationality_expected,nationality_predicted,debut_year_expected,debut_year_predicted,career_points_expected,career_points_predicted,era_expected,era_predicted,win_percentage_expected,win_percentage_predicted,podium_percentage_expected,podium_percentage_predicted,correct,status,latency_ms,tokens_in,tokens_out
+d01,openai/gpt-oss-20b,British,British,2007,2007,5201.5,5201.5,Turbo-Hybrid Era,Turbo-Hybrid Era,27.0,27.0,52.4,52.4,True,ok,2378.1,697,377
+d02,openai/gpt-oss-20b,German,German,1991,1991,1566.0,1566.0,Modern Era,Modern Era,29.5,29.5,50.3,50.3,True,ok,627.6,687,343
+d03,openai/gpt-oss-20b,Dutch,Dutch,2015,2015,3556.5,3556.5,Turbo-Hybrid Era,Modern Era,30.5,30.5,56.2,56.2,False,ok,849.6,681,399
+d04,openai/gpt-oss-20b,German,German,2007,2007,3098.0,3098.0,Turbo-Hybrid Era,Turbo-Hybrid Era,17.7,17.7,40.7,40.7,True,ok,947.9,689,325
+d05,openai/gpt-oss-20b,French,French,1980,1980,798.5,798.5,Grand Prix Era,Grand Prix Era,25.6,25.6,53.3,53.3,True,ok,559.5,684,377
+d06,openai/gpt-oss-20b,Brazilian,Brazilian,1984,1984,614.0,614.0,Grand Prix Era,Grand Prix Era,25.5,25.5,49.7,49.7,True,ok,905.2,687,387
+d07,openai/gpt-oss-20b,Spanish,Spanish,2001,2001,2396.0,2396.0,Modern Era,Modern Era,7.3,7.3,24.0,24.1,True,ok,964.9,693,341
+d08,openai/gpt-oss-20b,British,British,1980,1980,482.0,482.0,Grand Prix Era,Grand Prix Era,16.6,16.6,31.6,31.6,True,ok,1043.8,683,316
+d09,openai/gpt-oss-20b,British,British,1965,1965,360.0,360.0,Golden Era,Golden Era,27.3,27.3,43.4,43.4,True,ok,1233.3,698,654
+d10,openai/gpt-oss-20b,British,British,1960,1960,274.0,274.0,Golden Era,Golden Era,34.7,34.7,44.4,44.4,True,ok,467.6,679,277
+d11,openai/gpt-oss-20b,Argentine,Argentine,1950,1950,277.64,277.64,Golden Era,Golden Era,47.1,47.1,68.6,68.6,True,ok,8640.0,687,396
+d12,openai/gpt-oss-20b,Austrian,Austrian,1971,1971,420.5,420.5,Grand Prix Era,Grand Prix Era,14.6,14.6,31.6,31.6,True,ok,5051.8,694,564
+d13,openai/gpt-oss-20b,Brazilian,Brazilian,1978,1978,485.5,485.5,Grand Prix Era,Grand Prix Era,11.3,11.3,29.4,29.4,True,ok,8794.0,690,315
+d14,openai/gpt-oss-20b,British,British,1992,1992,360.0,360.0,Modern Era,Modern Era,18.0,18.0,34.4,34.4,True,ok,7881.4,680,400
+d15,openai/gpt-oss-20b,Finnish,Finnish,1991,1991,420.0,420.0,Modern Era,Modern Era,12.1,12.1,30.9,30.9,True,ok,7953.9,703,345
+d16,openai/gpt-oss-20b,Canadian,Canadian,1996,1996,235.0,235.0,Modern Era,Modern Era,6.7,6.7,13.9,13.9,True,ok,7165.7,686,380
+d17,openai/gpt-oss-20b,Finnish,Finnish,2001,2001,1873.0,1873.0,Modern Era,Modern Era,5.9,6.0,29.2,29.2,True,ok,4692.2,700,411
+d18,openai/gpt-oss-20b,British,British,2000,2000,1235.0,1235.0,Modern Era,Modern Era,4.9,4.9,16.2,16.2,True,ok,8754.3,690,304
+d19,openai/gpt-oss-20b,German,German,2006,2006,1594.5,1594.5,Modern Era,Modern Era,11.2,11.2,27.7,27.7,True,ok,7015.4,676,390
+d20,openai/gpt-oss-20b,Brazilian,Brazilian,1970,1970,281.0,281.0,Grand Prix Era,Grand Prix Era,9.7,9.7,24.3,24.3,True,ok,4000.3,689,363
+d21,openai/gpt-oss-20b,British,British,1958,1958,289.0,289.0,Golden Era,Golden Era,8.0,8.0,20.5,20.5,True,ok,7750.4,691,350
+d22,openai/gpt-oss-20b,Australian,Australian,1955,1955,261.0,261.0,Golden Era,Golden Era,11.1,11.1,24.6,24.6,True,ok,8236.6,681,318
+d23,openai/gpt-oss-20b,New Zealander,New Zealander,1965,1965,248.0,248.0,Golden Era,Golden Era,7.1,7.1,29.5,29.5,True,ok,3871.0,682,419
+d24,openai/gpt-oss-20b,British,British,1973,1973,179.0,179.0,Grand Prix Era,Grand Prix Era,10.9,10.9,25.0,24.9,True,ok,3911.6,682,346
+d25,openai/gpt-oss-20b,American,American,1968,1968,180.0,180.0,Golden Era,Golden Era,9.4,9.4,14.8,14.8,True,ok,7790.8,692,469
+d26,openai/gpt-oss-20b,South African,South African,1972,1972,255.0,255.0,Grand Prix Era,Grand Prix Era,8.9,8.9,29.5,29.5,True,ok,8789.8,684,378
+d27,openai/gpt-oss-20b,Australian,Australian,1975,1975,206.0,206.0,Grand Prix Era,Grand Prix Era,10.3,10.3,20.7,20.7,True,ok,8135.9,702,413
+d28,openai/gpt-oss-20b,Finnish,Finnish,1978,1978,159.5,159.5,Grand Prix Era,Grand Prix Era,4.4,4.4,14.9,14.9,True,ok,4882.7,691,412
+d29,openai/gpt-oss-20b,Italian,Italian,1950,1950,89.67,89.67,Golden Era,Golden Era,15.2,15.2,60.6,60.6,True,ok,7005.1,692,320
+d30,openai/gpt-oss-20b,Italian,Italian,1950,1950,140.64,140.64,Golden Era,Golden Era,40.6,40.6,53.1,53.1,True,ok,5044.5,676,558
+d31,openai/gpt-oss-20b,British,British,1952,1952,127.64,127.64,Golden Era,Golden Era,6.7,6.7,40.0,40.0,True,ok,5057.2,680,300
+d32,openai/gpt-oss-20b,British,British,1960,1960,189.0,189.0,Golden Era,Golden Era,5.4,5.4,21.6,21.6,True,ok,3130.1,684,496
+d33,openai/gpt-oss-20b,Austrian,Austrian,1964,1964,109.0,109.0,Golden Era,Golden Era,10.0,10.0,21.7,21.7,True,ok,10173.9,687,290
+d34,openai/gpt-oss-20b,Monegasque,Monegasque,2018,2018,1827.0,1827.0,Turbo-Hybrid Era,Turbo-Hybrid Era,4.6,4.6,31.2,31.2,True,ok,2353.7,683,407
+d35,openai/gpt-oss-20b,British,British,2019,2019,1589.0,1589.0,Turbo-Hybrid Era,Turbo-Hybrid Era,5.3,5.3,26.5,26.5,True,ok,4652.8,692,371
+d36,openai/gpt-oss-20b,Australian,Australian,2023,2023,700.0,700.0,Current Era,Current Era,12.9,12.9,37.1,37.1,True,ok,7812.8,693,283
+d37,openai/gpt-oss-20b,British,British,2019,2019,950.0,950.0,Turbo-Hybrid Era,Turbo-Hybrid Era,2.6,2.6,14.5,14.5,True,ok,6780.5,671,352
+d38,openai/gpt-oss-20b,Spanish,Spanish,2015,2015,1100.0,1100.0,Turbo-Hybrid Era,Turbo-Hybrid Era,1.9,1.9,12.6,12.6,True,ok,8127.0,693,419
+d39,openai/gpt-oss-20b,Mexican,Mexican,2011,2011,1638.0,1638.0,Turbo-Hybrid Era,Turbo-Hybrid Era,2.0,2.0,13.1,13.1,True,ok,7943.6,687,419
+d40,openai/gpt-oss-20b,Finnish,Finnish,2013,2013,1797.0,1797.0,Turbo-Hybrid Era,Turbo-Hybrid Era,4.1,4.1,27.7,27.6,True,ok,4809.9,684,407
+d41,openai/gpt-oss-20b,Australian,Australian,2011,2011,1329.0,1329.0,Turbo-Hybrid Era,Turbo-Hybrid Era,3.1,3.1,12.5,12.5,True,ok,4887.2,688,408
+d42,openai/gpt-oss-20b,British,British,1951,1951,186.64,186.64,Golden Era,Golden Era,24.2,24.2,36.4,36.4,True,ok,4034.3,688,352
+d43,openai/gpt-oss-20b,British,British,1994,1994,535.0,535.0,Modern Era,Modern Era,5.3,5.3,25.2,25.2,True,ok,8108.7,686,380
+d44,openai/gpt-oss-20b,Brazilian,Brazilian,1993,1993,658.0,658.0,Modern Era,Modern Era,3.4,3.4,20.9,20.9,True,ok,4136.0,691,645
+d45,openai/gpt-oss-20b,Brazilian,Brazilian,2002,2002,1167.0,1167.0,Modern Era,Modern Era,4.0,4.0,15.1,15.1,True,ok,6084.8,686,456
+d46,openai/gpt-oss-20b,Austrian,Austrian,1984,1984,385.0,385.0,Grand Prix Era,Grand Prix Era,4.8,4.8,22.9,22.9,True,ok,4697.4,682,355
+d47,openai/gpt-oss-20b,Australian,Australian,2002,2002,1047.5,1047.5,Modern Era,Modern Era,4.2,4.2,19.5,19.5,True,ok,9153.3,686,390
+d48,openai/gpt-oss-20b,Italian,Italian,1977,1977,281.0,281.0,Grand Prix Era,Grand Prix Era,2.3,2.3,14.5,14.5,True,ok,2987.3,695,437
+d49,openai/gpt-oss-20b,Swedish,Swedish,1970,1970,206.0,206.0,Grand Prix Era,Grand Prix Era,8.1,8.1,21.1,21.1,True,ok,7734.3,685,288
+d50,openai/gpt-oss-20b,Colombian,Colombian,2001,2001,307.0,307.0,Modern Era,Modern Era,7.4,7.4,31.9,31.9,True,ok,8020.2,681,467
+d01,phi4-mini,British,,2007,,5201.5,,Turbo-Hybrid Era,,27.0,,52.4,,False,parse_error,37743.2,629,53
+d02,phi4-mini,German,,1991,,1566.0,,Modern Era,,29.5,,50.3,,False,parse_error,22654.4,619,51
+d03,phi4-mini,Dutch,,2015,,3556.5,,Turbo-Hybrid Era,,30.5,,56.2,,False,parse_error,27045.8,613,51
+d04,phi4-mini,German,,2007,,3098.0,,Turbo-Hybrid Era,,17.7,,40.7,,False,parse_error,28436.6,621,53
+d05,phi4-mini,French,,1980,,798.5,,Grand Prix Era,,25.6,,53.3,,False,parse_error,14667.4,616,50
+d06,phi4-mini,Brazilian,,1984,,614.0,,Grand Prix Era,,25.5,,49.7,,False,parse_error,14753.1,619,51
+d07,phi4-mini,Spanish,,2001,,2396.0,,Modern Era,,7.3,,24.0,,False,parse_error,14953.7,625,51
+d08,phi4-mini,British,,1980,,482.0,,Grand Prix Era,,16.6,,31.6,,False,parse_error,12531.8,615,51
+d09,phi4-mini,British,,1965,,360.0,,Golden Era,,27.3,,43.4,,False,parse_error,14980.1,630,50
+d10,phi4-mini,British,,1960,,274.0,,Golden Era,,34.7,,44.4,,False,parse_error,13672.1,611,50
+d11,phi4-mini,Argentine,,1950,,277.64,,Golden Era,,47.1,,68.6,,False,parse_error,13427.7,619,51
+d12,phi4-mini,Austrian,,1971,,420.5,,Grand Prix Era,,14.6,,31.6,,False,parse_error,12723.8,626,40
+d13,phi4-mini,Brazilian,,1978,,485.5,,Grand Prix Era,,11.3,,29.4,,False,parse_error,17109.2,622,52
+d14,phi4-mini,British,,1992,,360.0,,Modern Era,,18.0,,34.4,,False,parse_error,16090.8,612,50
+d15,phi4-mini,Finnish,,1991,,420.0,,Modern Era,,12.1,,30.9,,False,parse_error,13255.7,635,51
+d16,phi4-mini,Canadian,,1996,,235.0,,Modern Era,,6.7,,13.9,,False,parse_error,14937.3,618,50
+d17,phi4-mini,Finnish,,2001,,1873.0,,Modern Era,,5.9,,29.2,,False,parse_error,15285.4,632,52
+d18,phi4-mini,British,,2000,,1235.0,,Modern Era,,4.9,,16.2,,False,parse_error,15873.9,622,51
+d19,phi4-mini,German,,2006,,1594.5,,Modern Era,,11.2,,27.7,,False,parse_error,14680.4,608,51
+d20,phi4-mini,Brazilian,,1970,,281.0,,Grand Prix Era,,9.7,,24.3,,False,parse_error,13747.7,621,52
+d21,phi4-mini,British,,1958,,289.0,,Golden Era,,8.0,,20.5,,False,parse_error,16785.0,623,50
+d22,phi4-mini,Australian,,1955,,261.0,,Golden Era,,11.1,,24.6,,False,parse_error,13880.9,613,50
+d23,phi4-mini,New Zealander,,1965,,248.0,,Golden Era,,7.1,,29.5,,False,parse_error,17493.5,614,54
+d24,phi4-mini,British,,1973,,179.0,,Grand Prix Era,,10.9,,25.0,,False,parse_error,16737.9,614,51
+d25,phi4-mini,American,,1968,,180.0,,Golden Era,,9.4,,14.8,,False,parse_error,14489.4,624,37
+d26,phi4-mini,South African,,1972,,255.0,,Grand Prix Era,,8.9,,29.5,,False,parse_error,13032.6,616,52
+d27,phi4-mini,Australian,,1975,,206.0,,Grand Prix Era,,10.3,,20.7,,False,parse_error,12738.2,634,51
+d28,phi4-mini,Finnish,,1978,,159.5,,Grand Prix Era,,4.4,,14.9,,False,parse_error,14339.9,623,60
+d29,phi4-mini,Italian,,1950,,89.67,,Golden Era,,15.2,,60.6,,False,parse_error,13191.4,624,50
+d30,phi4-mini,Italian,,1950,,140.64,,Golden Era,,40.6,,53.1,,False,parse_error,12336.8,608,47
+d31,phi4-mini,British,,1952,,127.64,,Golden Era,,6.7,,40.0,,False,parse_error,12837.0,612,50
+d32,phi4-mini,British,,1960,,189.0,,Golden Era,,5.4,,21.6,,False,parse_error,12039.6,616,51
+d33,phi4-mini,Austrian,,1964,,109.0,,Golden Era,,10.0,,21.7,,False,parse_error,13392.9,619,53
+d34,phi4-mini,Monegasque,,2018,,1827.0,,Turbo-Hybrid Era,,4.6,,31.2,,False,parse_error,13052.1,615,54
+d35,phi4-mini,British,,2019,,1589.0,,Turbo-Hybrid Era,,5.3,,26.5,,False,parse_error,12742.0,624,51
+d36,phi4-mini,Australian,,2023,,700.0,,Current Era,,12.9,,37.1,,False,parse_error,12134.1,625,47
+d37,phi4-mini,British,,2019,,950.0,,Turbo-Hybrid Era,,2.6,,14.5,,False,parse_error,10288.5,603,50
+d38,phi4-mini,Spanish,,2015,,1100.0,,Turbo-Hybrid Era,,1.9,,12.6,,False,parse_error,11638.0,625,51
+d39,phi4-mini,Mexican,,2011,,1638.0,,Turbo-Hybrid Era,,2.0,,13.1,,False,parse_error,11653.5,619,52
+d40,phi4-mini,Finnish,,2013,,1797.0,,Turbo-Hybrid Era,,4.1,,27.7,,False,parse_error,10652.3,616,52
+d41,phi4-mini,Australian,,2011,,1329.0,,Turbo-Hybrid Era,,3.1,,12.5,,False,parse_error,11517.3,620,51
+d42,phi4-mini,British,,1951,,186.64,,Golden Era,,24.2,,36.4,,False,parse_error,11463.6,620,50
+d43,phi4-mini,British,,1994,,535.0,,Modern Era,,5.3,,25.2,,False,parse_error,11405.8,618,50
+d44,phi4-mini,Brazilian,,1993,,658.0,,Modern Era,,3.4,,20.9,,False,parse_error,11992.2,623,51
+d45,phi4-mini,Brazilian,,2002,,1167.0,,Modern Era,,4.0,,15.1,,False,parse_error,12460.1,618,60
+d46,phi4-mini,Austrian,,1984,,385.0,,Grand Prix Era,,4.8,,22.9,,False,parse_error,11528.4,614,53
+d47,phi4-mini,Australian,,2002,,1047.5,,Modern Era,,4.2,,19.5,,False,parse_error,11473.5,618,51
+d48,phi4-mini,Italian,,1977,,281.0,,Grand Prix Era,,2.3,,14.5,,False,parse_error,11682.0,627,51
+d49,phi4-mini,Swedish,,1970,,206.0,,Grand Prix Era,,8.1,,21.1,,False,parse_error,11605.2,617,52
+d50,phi4-mini,Colombian,,2001,,307.0,,Modern Era,,7.4,,31.9,,False,parse_error,11493.0,613,52

@@ -1,0 +1,165 @@
+id,driver,correct,fail_reason,latency_ms,raw_output,expected_json
+d01,Lewis Hamilton,False,parse_error,37743.2,"```json
+{""nationality"": ""British"", ""debut_year"": 2007, ""career_points"": 5201.5, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 2007, ""career_points"": 5201.5, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 27.0, ""podium_percentage"": 52.4}"
+d02,Michael Schumacher,False,parse_error,22654.4,"```json
+{""nationality"": ""German"", ""debut_year"": 1991, ""career_points"": 1566.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""German"", ""debut_year"": 1991, ""career_points"": 1566.0, ""era"": ""Modern Era"", ""win_percentage"": 29.5, ""podium_percentage"": 50.3}"
+d03,Max Verstappen,False,parse_error,27045.8,"```json
+{""nationality"": ""Dutch"", ""debut_year"": 2015, ""career_points"": 3556.5, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Dutch"", ""debut_year"": 2015, ""career_points"": 3556.5, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 30.5, ""podium_percentage"": 56.2}"
+d04,Sebastian Vettel,False,parse_error,28436.6,"```json
+{""nationality"": ""German"", ""debut_year"": 2007, ""career_points"": 3098.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""German"", ""debut_year"": 2007, ""career_points"": 3098.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 17.7, ""podium_percentage"": 40.7}"
+d05,Alain Prost,False,parse_error,14667.4,"```json
+{""nationality"": ""French"", ""debut_year"": 1980, ""career_points"": 798.5, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""French"", ""debut_year"": 1980, ""career_points"": 798.5, ""era"": ""Grand Prix Era"", ""win_percentage"": 25.6, ""podium_percentage"": 53.3}"
+d06,Ayrton Senna,False,parse_error,14753.1,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1984, ""career_points"": 614.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Brazilian"", ""debut_year"": 1984, ""career_points"": 614.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 25.5, ""podium_percentage"": 49.7}"
+d07,Fernando Alonso,False,parse_error,14953.7,"```json
+{""nationality"": ""Spanish"", ""debut_year"": 2001, ""career_points"": 2396.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Spanish"", ""debut_year"": 2001, ""career_points"": 2396.0, ""era"": ""Modern Era"", ""win_percentage"": 7.3, ""podium_percentage"": 24.0}"
+d08,Nigel Mansell,False,parse_error,12531.8,"```json
+{""nationality"": ""British"", ""debut_year"": 1980, ""career_points"": 482.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1980, ""career_points"": 482.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 16.6, ""podium_percentage"": 31.6}"
+d09,Jackie Stewart,False,parse_error,14980.1,"```json
+{""nationality"": ""British"", ""debut_year"": 1965, ""career_points"": 360.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1965, ""career_points"": 360.0, ""era"": ""Golden Era"", ""win_percentage"": 27.3, ""podium_percentage"": 43.4}"
+d10,Jim Clark,False,parse_error,13672.1,"```json
+{""nationality"": ""British"", ""debut_year"": 1960, ""career_points"": 274.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1960, ""career_points"": 274.0, ""era"": ""Golden Era"", ""win_percentage"": 34.7, ""podium_percentage"": 44.4}"
+d11,Juan Manuel Fangio,False,parse_error,13427.7,"```json
+{""nationality"": ""Argentine"", ""debut_year"": 1950, ""career_points"": 277.64, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Argentine"", ""debut_year"": 1950, ""career_points"": 277.64, ""era"": ""Golden Era"", ""win_percentage"": 47.1, ""podium_percentage"": 68.6}"
+d12,Niki Lauda,False,parse_error,12723.8,"```json
+{""nationality"": ""Austrian"", ""debut_year"": 1971, ""career_points"": 420.5, ""era"": ""Grand Prix Era""}
+```","{""nationality"": ""Austrian"", ""debut_year"": 1971, ""career_points"": 420.5, ""era"": ""Grand Prix Era"", ""win_percentage"": 14.6, ""podium_percentage"": 31.6}"
+d13,Nelson Piquet,False,parse_error,17109.2,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1978, ""career_points"": 485.5, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Brazilian"", ""debut_year"": 1978, ""career_points"": 485.5, ""era"": ""Grand Prix Era"", ""win_percentage"": 11.3, ""podium_percentage"": 29.4}"
+d14,Damon Hill,False,parse_error,16090.8,"```json
+{""nationality"": ""British"", ""debut_year"": 1992, ""career_points"": 360.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1992, ""career_points"": 360.0, ""era"": ""Modern Era"", ""win_percentage"": 18.0, ""podium_percentage"": 34.4}"
+d15,Mika Hakkinen,False,parse_error,13255.7,"```json
+{""nationality"": ""Finnish"", ""debut_year"": 1991, ""career_points"": 420.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Finnish"", ""debut_year"": 1991, ""career_points"": 420.0, ""era"": ""Modern Era"", ""win_percentage"": 12.1, ""podium_percentage"": 30.9}"
+d16,Jacques Villeneuve,False,parse_error,14937.3,"```json
+{""nationality"": ""Canadian"", ""debut_year"": 1996, ""career_points"": 235.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Canadian"", ""debut_year"": 1996, ""career_points"": 235.0, ""era"": ""Modern Era"", ""win_percentage"": 6.7, ""podium_percentage"": 13.9}"
+d17,Kimi Raikkonen,False,parse_error,15285.4,"```json
+{""nationality"": ""Finnish"", ""debut_year"": 2001, ""career_points"": 1873.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Finnish"", ""debut_year"": 2001, ""career_points"": 1873.0, ""era"": ""Modern Era"", ""win_percentage"": 5.9, ""podium_percentage"": 29.2}"
+d18,Jenson Button,False,parse_error,15873.9,"```json
+{""nationality"": ""British"", ""debut_year"": 2000, ""career_points"": 1235.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 2000, ""career_points"": 1235.0, ""era"": ""Modern Era"", ""win_percentage"": 4.9, ""podium_percentage"": 16.2}"
+d19,Nico Rosberg,False,parse_error,14680.4,"```json
+{""nationality"": ""German"", ""debut_year"": 2006, ""career_points"": 1594.5, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""German"", ""debut_year"": 2006, ""career_points"": 1594.5, ""era"": ""Modern Era"", ""win_percentage"": 11.2, ""podium_percentage"": 27.7}"
+d20,Emerson Fittipaldi,False,parse_error,13747.7,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1970, ""career_points"": 281.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Brazilian"", ""debut_year"": 1970, ""career_points"": 281.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 9.7, ""podium_percentage"": 24.3}"
+d21,Graham Hill,False,parse_error,16785.0,"```json
+{""nationality"": ""British"", ""debut_year"": 1958, ""career_points"": 289.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1958, ""career_points"": 289.0, ""era"": ""Golden Era"", ""win_percentage"": 8.0, ""podium_percentage"": 20.5}"
+d22,Jack Brabham,False,parse_error,13880.9,"```json
+{""nationality"": ""Australian"", ""debut_year"": 1955, ""career_points"": 261.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Australian"", ""debut_year"": 1955, ""career_points"": 261.0, ""era"": ""Golden Era"", ""win_percentage"": 11.1, ""podium_percentage"": 24.6}"
+d23,Denny Hulme,False,parse_error,17493.5,"```json
+{""nationality"": ""New Zealander"", ""debut_year"": 1965, ""career_points"": 248.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""New Zealander"", ""debut_year"": 1965, ""career_points"": 248.0, ""era"": ""Golden Era"", ""win_percentage"": 7.1, ""podium_percentage"": 29.5}"
+d24,James Hunt,False,parse_error,16737.9,"```json
+{""nationality"": ""British"", ""debut_year"": 1973, ""career_points"": 179.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1973, ""career_points"": 179.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 10.9, ""podium_percentage"": 25.0}"
+d25,Mario Andretti,False,parse_error,14489.4,"```json
+{""nationality"": ""American"", ""debut_year"": 1968, ""career_points"": 180.0, ""era"": ""Golden Era""}
+```","{""nationality"": ""American"", ""debut_year"": 1968, ""career_points"": 180.0, ""era"": ""Golden Era"", ""win_percentage"": 9.4, ""podium_percentage"": 14.8}"
+d26,Jody Scheckter,False,parse_error,13032.6,"```json
+{""nationality"": ""South African"", ""debut_year"": 1972, ""career_points"": 255.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""South African"", ""debut_year"": 1972, ""career_points"": 255.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 8.9, ""podium_percentage"": 29.5}"
+d27,Alan Jones,False,parse_error,12738.2,"```json
+{""nationality"": ""Australian"", ""debut_year"": 1975, ""career_points"": 206.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Australian"", ""debut_year"": 1975, ""career_points"": 206.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 10.3, ""podium_percentage"": 20.7}"
+d28,Keke Rosberg,False,parse_error,14339.9,"```json
+{
+  ""nationality"": ""Finnish"",
+  ""debut_year"": 1978,
+  ""career_points"": 159.5,
+  ""era"": ""Grand Prix Era"",
+  ""win_percentage"": null,
+  ""podium_percentage"": null
+}
+```","{""nationality"": ""Finnish"", ""debut_year"": 1978, ""career_points"": 159.5, ""era"": ""Grand Prix Era"", ""win_percentage"": 4.4, ""podium_percentage"": 14.9}"
+d29,Giuseppe Farina,False,parse_error,13191.4,"```json
+{""nationality"": ""Italian"", ""debut_year"": 1950, ""career_points"": 89.67, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Italian"", ""debut_year"": 1950, ""career_points"": 89.67, ""era"": ""Golden Era"", ""win_percentage"": 15.2, ""podium_percentage"": 60.6}"
+d30,Alberto Ascari,False,parse_error,12336.8,"```json
+{""nationality"": ""Italian"", ""debut_year"": 1950, ""career_points"": null, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Italian"", ""debut_year"": 1950, ""career_points"": 140.64, ""era"": ""Golden Era"", ""win_percentage"": 40.6, ""podium_percentage"": 53.1}"
+d31,Mike Hawthorn,False,parse_error,12837.0,"```json
+{""nationality"": ""British"", ""debut_year"": 1952, ""career_points"": 127.64, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1952, ""career_points"": 127.64, ""era"": ""Golden Era"", ""win_percentage"": 6.7, ""podium_percentage"": 40.0}"
+d32,John Surtees,False,parse_error,12039.6,"```json
+{""nationality"": ""British"", ""debut_year"": 1960, ""career_points"": 189.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1960, ""career_points"": 189.0, ""era"": ""Golden Era"", ""win_percentage"": 5.4, ""podium_percentage"": 21.6}"
+d33,Jochen Rindt,False,parse_error,13392.9,"```json
+{""nationality"": ""Austrian"", ""debut_year"": 1964, ""career_points"": 109.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Austrian"", ""debut_year"": 1964, ""career_points"": 109.0, ""era"": ""Golden Era"", ""win_percentage"": 10.0, ""podium_percentage"": 21.7}"
+d34,Charles Leclerc,False,parse_error,13052.1,"```json
+{""nationality"": ""Monegasque"", ""debut_year"": 2018, ""career_points"": 1827.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Monegasque"", ""debut_year"": 2018, ""career_points"": 1827.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 4.6, ""podium_percentage"": 31.2}"
+d35,Lando Norris,False,parse_error,12742.0,"```json
+{""nationality"": ""British"", ""debut_year"": 2019, ""career_points"": 1589.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 2019, ""career_points"": 1589.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 5.3, ""podium_percentage"": 26.5}"
+d36,Oscar Piastri,False,parse_error,12134.1,"```json
+{""nationality"": ""Australian"", ""debut_year"": 2023, ""career_points"": null, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Australian"", ""debut_year"": 2023, ""career_points"": 700.0, ""era"": ""Current Era"", ""win_percentage"": 12.9, ""podium_percentage"": 37.1}"
+d37,George Russell,False,parse_error,10288.5,"```json
+{""nationality"": ""British"", ""debut_year"": 2019, ""career_points"": 950.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 2019, ""career_points"": 950.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 2.6, ""podium_percentage"": 14.5}"
+d38,Carlos Sainz Jr.,False,parse_error,11638.0,"```json
+{""nationality"": ""Spanish"", ""debut_year"": 2015, ""career_points"": 1100.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Spanish"", ""debut_year"": 2015, ""career_points"": 1100.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 1.9, ""podium_percentage"": 12.6}"
+d39,Sergio Perez,False,parse_error,11653.5,"```json
+{""nationality"": ""Mexican"", ""debut_year"": 2011, ""career_points"": 1638.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Mexican"", ""debut_year"": 2011, ""career_points"": 1638.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 2.0, ""podium_percentage"": 13.1}"
+d40,Valtteri Bottas,False,parse_error,10652.3,"```json
+{""nationality"": ""Finnish"", ""debut_year"": 2013, ""career_points"": 1797.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Finnish"", ""debut_year"": 2013, ""career_points"": 1797.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 4.1, ""podium_percentage"": 27.7}"
+d41,Daniel Ricciardo,False,parse_error,11517.3,"```json
+{""nationality"": ""Australian"", ""debut_year"": 2011, ""career_points"": 1329.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Australian"", ""debut_year"": 2011, ""career_points"": 1329.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": 3.1, ""podium_percentage"": 12.5}"
+d42,Stirling Moss,False,parse_error,11463.6,"```json
+{""nationality"": ""British"", ""debut_year"": 1951, ""career_points"": 186.64, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1951, ""career_points"": 186.64, ""era"": ""Golden Era"", ""win_percentage"": 24.2, ""podium_percentage"": 36.4}"
+d43,David Coulthard,False,parse_error,11405.8,"```json
+{""nationality"": ""British"", ""debut_year"": 1994, ""career_points"": 535.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""British"", ""debut_year"": 1994, ""career_points"": 535.0, ""era"": ""Modern Era"", ""win_percentage"": 5.3, ""podium_percentage"": 25.2}"
+d44,Rubens Barrichello,False,parse_error,11992.2,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1993, ""career_points"": 658.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Brazilian"", ""debut_year"": 1993, ""career_points"": 658.0, ""era"": ""Modern Era"", ""win_percentage"": 3.4, ""podium_percentage"": 20.9}"
+d45,Felipe Massa,False,parse_error,12460.1,"```json
+{
+  ""nationality"": ""Brazilian"",
+  ""debut_year"": 2002,
+  ""career_points"": 1167.0,
+  ""era"": ""Modern Era"",
+  ""win_percentage"": null,
+  ""podium_percentage"": null
+}
+```","{""nationality"": ""Brazilian"", ""debut_year"": 2002, ""career_points"": 1167.0, ""era"": ""Modern Era"", ""win_percentage"": 4.0, ""podium_percentage"": 15.1}"
+d46,Gerhard Berger,False,parse_error,11528.4,"```json
+{""nationality"": ""Austrian"", ""debut_year"": 1984, ""career_points"": 385.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Austrian"", ""debut_year"": 1984, ""career_points"": 385.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 4.8, ""podium_percentage"": 22.9}"
+d47,Mark Webber,False,parse_error,11473.5,"```json
+{""nationality"": ""Australian"", ""debut_year"": 2002, ""career_points"": 1047.5, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Australian"", ""debut_year"": 2002, ""career_points"": 1047.5, ""era"": ""Modern Era"", ""win_percentage"": 4.2, ""podium_percentage"": 19.5}"
+d48,Riccardo Patrese,False,parse_error,11682.0,"```json
+{""nationality"": ""Italian"", ""debut_year"": 1977, ""career_points"": 281.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Italian"", ""debut_year"": 1977, ""career_points"": 281.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 2.3, ""podium_percentage"": 14.5}"
+d49,Ronnie Peterson,False,parse_error,11605.2,"```json
+{""nationality"": ""Swedish"", ""debut_year"": 1970, ""career_points"": 206.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Swedish"", ""debut_year"": 1970, ""career_points"": 206.0, ""era"": ""Grand Prix Era"", ""win_percentage"": 8.1, ""podium_percentage"": 21.1}"
+d50,Juan Pablo Montoya,False,parse_error,11493.0,"```json
+{""nationality"": ""Colombian"", ""debut_year"": 2001, ""career_points"": 307.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```","{""nationality"": ""Colombian"", ""debut_year"": 2001, ""career_points"": 307.0, ""era"": ""Modern Era"", ""win_percentage"": 7.4, ""podium_percentage"": 31.9}"

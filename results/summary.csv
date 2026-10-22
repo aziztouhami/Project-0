@@ -1,0 +1,3 @@
+model,n_items,correct,accuracy_pct,status_ok,status_parse_error,status_refusal,status_timeout,status_api_error,latency_p50_ms,latency_p95_ms,mean_tokens_in,mean_tokens_out,mean_tokens_per_second,nationality_correct_of_50,debut_year_correct_of_50,career_points_correct_of_50,era_correct_of_50,win_percentage_correct_of_50,podium_percentage_correct_of_50
+openai/gpt-oss-20b,50,49,98.0,50,0,0,0,0,5048.1,8792.1,687.36,391.38,,50,50,50,49,50,50
+phi4-mini,50,0,0.0,0,50,0,0,0,13223.5,25069.7,619.36,50.9,7.84,0,0,0,0,0,0

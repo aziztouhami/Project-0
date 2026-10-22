@@ -4,8 +4,8 @@ Two modes:
 
   API mode -- cost is driven by token usage and the provider's published
   per-token prices:
-      python src/cost.py --raw results/raw/top.csv --mode api \
-          --price-in 3.00 --price-out 15.00
+      python src/cost.py --raw results/raw/cheap.csv --mode api \
+          --price-in 0.10 --price-out 0.50
 
   Local mode -- cost is driven by wall-clock latency and the hourly cost of
   the machine running the model:

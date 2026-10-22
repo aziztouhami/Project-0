@@ -1,0 +1,165 @@
+id,driver,model,provider,raw_output,latency_ms,prompt_tokens,completion_tokens,tokens_per_second,error,timestamp_utc
+d01,Lewis Hamilton,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 2007, ""career_points"": 5201.5, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",37743.2,629,53,3.09,,2026-10-20T12:19:26.965921+00:00
+d02,Michael Schumacher,phi4-mini,ollama,"```json
+{""nationality"": ""German"", ""debut_year"": 1991, ""career_points"": 1566.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",22654.4,619,51,4.85,,2026-10-20T12:19:49.638727+00:00
+d03,Max Verstappen,phi4-mini,ollama,"```json
+{""nationality"": ""Dutch"", ""debut_year"": 2015, ""career_points"": 3556.5, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",27045.8,613,51,3.37,,2026-10-20T12:20:16.684754+00:00
+d04,Sebastian Vettel,phi4-mini,ollama,"```json
+{""nationality"": ""German"", ""debut_year"": 2007, ""career_points"": 3098.0, ""era"": ""Turbo-Hybrid Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",28436.6,621,53,3.3,,2026-10-20T12:20:45.122804+00:00
+d05,Alain Prost,phi4-mini,ollama,"```json
+{""nationality"": ""French"", ""debut_year"": 1980, ""career_points"": 798.5, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",14667.4,616,50,6.98,,2026-10-20T12:20:59.792008+00:00
+d06,Ayrton Senna,phi4-mini,ollama,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1984, ""career_points"": 614.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",14753.1,619,51,7.59,,2026-10-20T12:21:14.545511+00:00
+d07,Fernando Alonso,phi4-mini,ollama,"```json
+{""nationality"": ""Spanish"", ""debut_year"": 2001, ""career_points"": 2396.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",14953.7,625,51,8.02,,2026-10-20T12:21:29.499905+00:00
+d08,Nigel Mansell,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1980, ""career_points"": 482.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",12531.8,615,51,7.88,,2026-10-20T12:21:42.032661+00:00
+d09,Jackie Stewart,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1965, ""career_points"": 360.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",14980.1,630,50,7.01,,2026-10-20T12:21:57.013296+00:00
+d10,Jim Clark,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1960, ""career_points"": 274.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13672.1,611,50,7.34,,2026-10-20T12:22:10.686779+00:00
+d11,Juan Manuel Fangio,phi4-mini,ollama,"```json
+{""nationality"": ""Argentine"", ""debut_year"": 1950, ""career_points"": 277.64, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13427.7,619,51,8.19,,2026-10-20T12:22:24.114955+00:00
+d12,Niki Lauda,phi4-mini,ollama,"```json
+{""nationality"": ""Austrian"", ""debut_year"": 1971, ""career_points"": 420.5, ""era"": ""Grand Prix Era""}
+```",12723.8,626,40,7.33,,2026-10-20T12:22:36.838768+00:00
+d13,Nelson Piquet,phi4-mini,ollama,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1978, ""career_points"": 485.5, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",17109.2,622,52,6.5,,2026-10-20T12:22:53.948766+00:00
+d14,Damon Hill,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1992, ""career_points"": 360.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",16090.8,612,50,6.62,,2026-10-20T12:23:10.039946+00:00
+d15,Mika Hakkinen,phi4-mini,ollama,"```json
+{""nationality"": ""Finnish"", ""debut_year"": 1991, ""career_points"": 420.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13255.7,635,51,7.98,,2026-10-20T12:23:23.296200+00:00
+d16,Jacques Villeneuve,phi4-mini,ollama,"```json
+{""nationality"": ""Canadian"", ""debut_year"": 1996, ""career_points"": 235.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",14937.3,618,50,7.37,,2026-10-20T12:23:38.233248+00:00
+d17,Kimi Raikkonen,phi4-mini,ollama,"```json
+{""nationality"": ""Finnish"", ""debut_year"": 2001, ""career_points"": 1873.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",15285.4,632,52,6.68,,2026-10-20T12:23:53.519325+00:00
+d18,Jenson Button,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 2000, ""career_points"": 1235.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",15873.9,622,51,7.47,,2026-10-20T12:24:09.393611+00:00
+d19,Nico Rosberg,phi4-mini,ollama,"```json
+{""nationality"": ""German"", ""debut_year"": 2006, ""career_points"": 1594.5, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",14680.4,608,51,7.55,,2026-10-20T12:24:24.073901+00:00
+d20,Emerson Fittipaldi,phi4-mini,ollama,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1970, ""career_points"": 281.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13747.7,621,52,7.57,,2026-10-20T12:24:37.821630+00:00
+d21,Graham Hill,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1958, ""career_points"": 289.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",16785.0,623,50,7.31,,2026-10-20T12:24:54.607019+00:00
+d22,Jack Brabham,phi4-mini,ollama,"```json
+{""nationality"": ""Australian"", ""debut_year"": 1955, ""career_points"": 261.0, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13880.9,613,50,7.04,,2026-10-20T12:25:08.488104+00:00
+d23,Denny Hulme,phi4-mini,ollama,"```json
+{""nationality"": ""New Zealander"", ""debut_year"": 1965, ""career_points"": 248.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",17493.5,614,54,6.17,,2026-10-20T12:25:25.981996+00:00
+d24,James Hunt,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1973, ""career_points"": 179.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",16737.9,614,51,6.94,,2026-10-20T12:25:42.720193+00:00
+d25,Mario Andretti,phi4-mini,ollama,"```json
+{""nationality"": ""American"", ""debut_year"": 1968, ""career_points"": 180.0, ""era"": ""Golden Era""}
+```",14489.4,624,37,7.32,,2026-10-20T12:25:57.210438+00:00
+d26,Jody Scheckter,phi4-mini,ollama,"```json
+{""nationality"": ""South African"", ""debut_year"": 1972, ""career_points"": 255.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13032.6,616,52,8.84,,2026-10-20T12:26:10.243358+00:00
+d27,Alan Jones,phi4-mini,ollama,"```json
+{""nationality"": ""Australian"", ""debut_year"": 1975, ""career_points"": 206.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",12738.2,634,51,8.8,,2026-10-20T12:26:22.981681+00:00
+d28,Keke Rosberg,phi4-mini,ollama,"```json
+{
+  ""nationality"": ""Finnish"",
+  ""debut_year"": 1978,
+  ""career_points"": 159.5,
+  ""era"": ""Grand Prix Era"",
+  ""win_percentage"": null,
+  ""podium_percentage"": null
+}
+```",14339.9,623,60,8.04,,2026-10-20T12:26:37.321461+00:00
+d29,Giuseppe Farina,phi4-mini,ollama,"```json
+{""nationality"": ""Italian"", ""debut_year"": 1950, ""career_points"": 89.67, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13191.4,624,50,8.04,,2026-10-20T12:26:50.513722+00:00
+d30,Alberto Ascari,phi4-mini,ollama,"```json
+{""nationality"": ""Italian"", ""debut_year"": 1950, ""career_points"": null, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",12336.8,608,47,8.19,,2026-10-20T12:27:02.850206+00:00
+d31,Mike Hawthorn,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1952, ""career_points"": 127.64, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",12837.0,612,50,8.02,,2026-10-20T12:27:15.687317+00:00
+d32,John Surtees,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1960, ""career_points"": 189.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",12039.6,616,51,9.17,,2026-10-20T12:27:27.727230+00:00
+d33,Jochen Rindt,phi4-mini,ollama,"```json
+{""nationality"": ""Austrian"", ""debut_year"": 1964, ""career_points"": 109.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13392.9,619,53,8.09,,2026-10-20T12:27:41.120201+00:00
+d34,Charles Leclerc,phi4-mini,ollama,"```json
+{""nationality"": ""Monegasque"", ""debut_year"": 2018, ""career_points"": 1827.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",13052.1,615,54,9.53,,2026-10-20T12:27:54.172706+00:00
+d35,Lando Norris,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 2019, ""career_points"": 1589.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",12742.0,624,51,8.53,,2026-10-20T12:28:06.914926+00:00
+d36,Oscar Piastri,phi4-mini,ollama,"```json
+{""nationality"": ""Australian"", ""debut_year"": 2023, ""career_points"": null, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",12134.1,625,47,8.77,,2026-10-20T12:28:19.049292+00:00
+d37,George Russell,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 2019, ""career_points"": 950.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",10288.5,603,50,9.67,,2026-10-20T12:28:29.338917+00:00
+d38,Carlos Sainz Jr.,phi4-mini,ollama,"```json
+{""nationality"": ""Spanish"", ""debut_year"": 2015, ""career_points"": 1100.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11638.0,625,51,9.22,,2026-10-20T12:28:40.976658+00:00
+d39,Sergio Perez,phi4-mini,ollama,"```json
+{""nationality"": ""Mexican"", ""debut_year"": 2011, ""career_points"": 1638.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11653.5,619,52,9.24,,2026-10-20T12:28:52.630400+00:00
+d40,Valtteri Bottas,phi4-mini,ollama,"```json
+{""nationality"": ""Finnish"", ""debut_year"": 2013, ""career_points"": 1797.0, ""era"": ""Current Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",10652.3,616,52,9.72,,2026-10-20T12:29:03.283016+00:00
+d41,Daniel Ricciardo,phi4-mini,ollama,"```json
+{""nationality"": ""Australian"", ""debut_year"": 2011, ""career_points"": 1329.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11517.3,620,51,9.26,,2026-10-20T12:29:14.800427+00:00
+d42,Stirling Moss,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1951, ""career_points"": 186.64, ""era"": ""Golden Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11463.6,620,50,9.25,,2026-10-20T12:29:26.263955+00:00
+d43,David Coulthard,phi4-mini,ollama,"```json
+{""nationality"": ""British"", ""debut_year"": 1994, ""career_points"": 535.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11405.8,618,50,9.28,,2026-10-20T12:29:37.669922+00:00
+d44,Rubens Barrichello,phi4-mini,ollama,"```json
+{""nationality"": ""Brazilian"", ""debut_year"": 1993, ""career_points"": 658.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11992.2,623,51,9.27,,2026-10-20T12:29:49.662066+00:00
+d45,Felipe Massa,phi4-mini,ollama,"```json
+{
+  ""nationality"": ""Brazilian"",
+  ""debut_year"": 2002,
+  ""career_points"": 1167.0,
+  ""era"": ""Modern Era"",
+  ""win_percentage"": null,
+  ""podium_percentage"": null
+}
+```",12460.1,618,60,9.25,,2026-10-20T12:30:02.122324+00:00
+d46,Gerhard Berger,phi4-mini,ollama,"```json
+{""nationality"": ""Austrian"", ""debut_year"": 1984, ""career_points"": 385.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11528.4,614,53,9.38,,2026-10-20T12:30:13.651062+00:00
+d47,Mark Webber,phi4-mini,ollama,"```json
+{""nationality"": ""Australian"", ""debut_year"": 2002, ""career_points"": 1047.5, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11473.5,618,51,9.2,,2026-10-20T12:30:25.124389+00:00
+d48,Riccardo Patrese,phi4-mini,ollama,"```json
+{""nationality"": ""Italian"", ""debut_year"": 1977, ""career_points"": 281.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11682.0,627,51,9.19,,2026-10-20T12:30:36.806423+00:00
+d49,Ronnie Peterson,phi4-mini,ollama,"```json
+{""nationality"": ""Swedish"", ""debut_year"": 1970, ""career_points"": 206.0, ""era"": ""Grand Prix Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11605.2,617,52,9.24,,2026-10-20T12:30:48.411676+00:00
+d50,Juan Pablo Montoya,phi4-mini,ollama,"```json
+{""nationality"": ""Colombian"", ""debut_year"": 2001, ""career_points"": 307.0, ""era"": ""Modern Era"", ""win_percentage"": null, ""podium_percentage"": null}
+```",11493.0,613,52,9.25,,2026-10-20T12:30:59.904701+00:00

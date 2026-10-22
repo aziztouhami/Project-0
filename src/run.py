@@ -1,12 +1,13 @@
 """Run one model against all 50 items in data/items.jsonl and write a results CSV.
 
-Same script, different --model/--provider args, run once per teammate/model.
-This is what keeps the three runs comparable: identical prompt, identical
-item order, identical temperature/max_tokens, one item at a time.
+Same script, different --model/--provider args, run once per model compared.
+This is what keeps the runs comparable: identical prompt, identical item
+order, identical temperature/max_tokens, one item at a time.
 
 Usage:
-    python src/run.py --model claude-opus-4 --provider anthropic \
-        --items data/items.jsonl --prompt src/prompt.txt --out results/raw/top.csv
+    python src/run.py --model openai/gpt-oss-20b --provider openai \
+        --base-url https://api.groq.com/openai/v1 --api-key-env GROQ_API_KEY \
+        --items data/items.jsonl --prompt src/prompt.txt --out results/raw/cheap.csv
 """
 import argparse
 import csv
